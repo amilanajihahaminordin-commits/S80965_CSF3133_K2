@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Personal Profile</h1>
+        <p>Welcome to my personal webpage!</p>
+    </header>
+
+    <nav>
+        <a href="#profile">Profile</a> |
+        <a href="#form">Form</a>
+    </nav>
+
+    <hr>
+
+    <section id="profile">
+        <h2>About Me</h2>
+
+        <article>
+            <h3>Introduction</h3>
+            <p>Hello! My name is Amila Najihah.</p>
+            <p>I am a student. My hobbies are reading and gaming.</p>
+        </article>
+
+        <h2>Personal Information</h2>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Occupation</th>
+            </tr>
+
+            <tr>
+                <td>Amila Najihah</td>
+                <td>24</td>
+                <td>Student</td>
+            </tr>
+
+            <tr>
+                <td>Amalin Adini</td>
+                <td>23</td>
+                <td>Student</td>
+            </tr>
+
+            <tr>
+                <td>Ayana Elisya</td>
+                <td>20</td>
+                <td>Student</td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="form">
+        <h2>Personal Profile Form</h2>
+
+        <form>
+            <label for="fname">Full Name:</label>
+            <input type="text" id="fname" name="fullname" required>
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <p>Gender:</p>
+
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            <br><br>
+
+            <p>Select your hobbies:</p>
+
+            <input type="checkbox" id="hobby1" name="hobbies" value="Reading">
+            <label for="hobby1">Reading</label>
+
+            <input type="checkbox" id="hobby2" name="hobbies" value="Gaming">
+            <label for="hobby2">Gaming</label>
+
+            <input type="checkbox" id="hobby3" name="hobbies" value="Baking">
+            <label for="hobby3">Baking</label>
+            <br><br>
+
+            <label for="country">Choose a country:</label>
+
+            <select id="country" name="country">
+                <option value="Malaysia">Malaysia</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">UK</option>
+            </select>
+            <br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 My Profile</p>
+    </footer>
+
+</body>
+</html>
