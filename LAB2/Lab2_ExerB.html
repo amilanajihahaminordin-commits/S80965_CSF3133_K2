@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Course Feedback</title>
+    <!-- CSS style block added to handle the table border cleanly without HTML5 validation warnings -->
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>CSF3133 Course Feedback</h1>
+    </header>
+
+    <nav>
+        <a href="#results">Results</a> | 
+        <a href="#form">Feedback Form</a> |
+        <!-- Added link to comments section (Requirement 7) -->
+        <a href="#comments">Student Comments</a>
+    </nav>
+
+    <section id="results">
+        <h2>Feedback Summary</h2>
+        <table>
+            <tr>
+                <th>Week</th>
+                <th>Topic</th>
+                <th>Rating</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Introduction to HTML</td>
+                <td>4.5</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td> Tables and Forms</td>
+                <td>4.9</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Semantic HTML</td>
+                <td>4.0</td>
+            </tr>
+            <!-- New rows for Week 4 and Week 5 with rowspan="2" (Requirement 5) -->
+            <tr>
+                <td>4</td>
+                <td rowspan="2">Mini Project</td>
+                <td>4.8</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>4.9</td>
+            </tr>
+            <!-- Final row for Average Rating with colspan="2" (Requirement 5) -->
+            <tr>
+                <td colspan="2">Average Rating</td>
+                <td>4.55</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="form">
+        <h2>Give Your Feedback</h2>
+        <form action="submit_feedback.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <!-- Added E-mail input with matching label (Requirement 6) -->
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <!-- Added Section/Group dropdown selection element (Requirement 6) -->
+            <label for="section">Section/Group:</label>
+            <select id="section" name="section" required>
+                <option value="">-- Choose Option --</option>
+                <option value="Group A">Group A</option>
+                <option value="Group B">Group B</option>
+                <option value="Group C">Group C</option>
+            </select><br><br>
+
+            <label>Overall rating:</label><br>
+            <input type="radio" id="good" name="rating" value="good">
+            <label for="good">Good</label>
+            
+            <!-- Added "Average" radio option option (Requirement 6) -->
+            <input type="radio" id="average" name="rating" value="average">
+            <label for="average">Average</label>
+
+            <input type="radio" id="poor" name="rating" value="poor">
+            <label for="poor">Poor</label><br><br>
+
+            <!-- Added checkboxes for "Topics I want more practice on" (Requirement 6) -->
+            <p>Topics I want more practice on:</p>
+            <input type="checkbox" id="practice1" name="practice[]" value="Tables">
+            <label for="practice1">HTML Tables</label><br>
+            <input type="checkbox" id="practice2" name="practice[]" value="Forms">
+            <label for="practice2">HTML Forms</label><br>
+            <input type="checkbox" id="practice3" name="practice[]" value="Semantic">
+            <label for="practice3">Semantic Tags</label><br><br>
+
+            <input type="checkbox" id="labs" name="lab" value="yes">
+            <label for="labs">I attended all labs</label><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!-- Added Student Comments Section using semantic elements (Requirement 7) -->
+    <section id="comments">
+        <h2>Student Comments</h2>
+        <article>
+            <h3>Amila Najihah</h3>
+            <p>The practical sessions were incredibly helpful for understanding forms!</p>
+        </article>
+        <article>
+            <h3>Amalin Adini</h3>
+            <p>The structural layout of the labs made learning semantic HTML very straightforward.</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; 2026 CSF3133</p>
+    </footer>
+</body>
+</html>
