@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Contact Form &amp; Calculator</title>
+</head>
+<body>
+
+    
+    <div id="header">
+        <h1>TechConnect <span>- We'd love to hear your feedback!</span></h1>
+    </div>
+
+   
+    <div id="content">
+        
+        <!-- Contact Form Section -->
+        <div id="contact-form-container">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <!-- Email Input -->
+                <p>
+                    <label for="userEmail">Email Address:</label><br>
+                    <input type="email" id="userEmail" name="userEmail" placeholder="example@domain.com" required>
+                </p>
+
+                <!-- Date Input -->
+                <p>
+                    <label for="contactDate">Preferred Contact Date:</label><br>
+                    <input type="date" id="contactDate" name="contactDate">
+                </p>
+
+                <!-- Range Slider for Satisfaction -->
+                <p>
+                    <label for="satisfaction">Satisfaction Level (1-10):</label><br>
+                    <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" value="5">
+                </p>
+
+                <!-- Submit Button -->
+                <p>
+                    <input type="submit" value="Submit Feedback">
+                </p>
+            </form>
+        </div>
+
+        <!-- Inline Calculator Section -->
+        <div id="calculator-container">
+            <h2>Dynamic Sum Calculator</h2>
+            <form id="calcForm" oninput="sumResult.value = (parseFloat(num1.value) || 0) + (parseFloat(num2.value) || 0)">
+                <p>
+                    <label for="num1">First Number:</label><br>
+                    <input type="number" id="num1" name="num1" placeholder="Enter first number" value="0">
+                </p>
+                <p>
+                    <label for="num2">Second Number:</label><br>
+                    <input type="number" id="num2" name="num2" placeholder="Enter second number" value="0">
+                </p>
+                <p>
+                    <strong>Total Sum: </strong>
+                    <output name="sumResult" for="num1 num2">0</output>
+                </p>
+            </form>
+        </div>
+
+    </div>
+
+
+    <div id="footer">
+        <p>&copy; 2026 TechConnect Inc. | Support: info@techconnect.com | All rights reserved.</p>
+    </div>
+
+</body>
+</html>

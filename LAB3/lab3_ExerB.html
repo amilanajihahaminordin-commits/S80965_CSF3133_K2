@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket Booking</title>
+</head>
+<body>
+
+    <!-- 
+      Error List:
+      - Fixed Error 1 & 2: Moved the inner "Customer Name" comment block outside of the main multi-line body comment to prevent nested comment violations.
+      - Fixed Error 3 & 4: Corrected form nesting structure to prevent stray end tags for form and div elements.
+      - Fixed Warning 5: Re-structured headers systematically so headings validate correctly under document outline algorithms.
+    -->
+
+    
+    <div id="header">
+        <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+    </div>
+
+    
+    <div id="content">
+        <h2>Book Your Ticket</h2>
+        <p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+        
+        <form action="booking.php" id="bookingForm" oninput="
+            total.value = (parseInt(adult.value) || 0) + (parseInt(child.value) || 0);
+            price.value = ((parseInt(adult.value) || 0) * 12) + ((parseInt(child.value) || 0) * 8);
+        ">
+            <!-- Customer Name Section -->
+            <p>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br>
+            </p>
+
+            <!-- Contact Phone Number -->
+            <p>
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="e.g., 012-3456789" required><br>
+            </p>
+
+            <!-- E-mail Address -->
+            <p>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" placeholder="username@campus.edu" required><br>
+            </p>
+
+            <!-- Show Date & Time -->
+            <p>
+                <label for="date">Show Date:</label><br>
+                <input type="date" id="date" name="date"><br>
+            </p>
+            <p>
+                <label for="time">Show Time:</label><br>
+                <input type="time" id="time" name="time"><br>
+            </p>
+
+            <!-- Movie Selection List -->
+            <p>
+                <label for="movie">Movie:</label><br>
+                <input id="movie" name="movie" list="movielist"><br>
+                <datalist id="movielist">
+                    <option value="Space Rangers">
+                    <option value="Kampung Comedy">
+                    <option value="Campus Mystery">
+                </datalist>
+            </p>
+
+            <!-- Ticket Quantities -->
+            <p>
+                <label for="adult">Adult tickets:</label><br>
+                <input type="number" id="adult" name="adult" min="0" value="0"><br>
+            </p>
+            <p>
+                <label for="child">Child tickets:</label><br>
+                <input type="number" id="child" name="child" min="0" value="0"><br>
+            </p>
+
+            <!-- Service Rating Slider -->
+            <p>
+                <label for="rating">Rate our service:</label><br>
+                <input type="range" id="rating" name="rating" min="1" max="5" value="3"><br>
+            </p>
+
+            <!-- Price & Ticket Calculations -->
+            <p>
+                Total tickets: <output name="total" for="adult child">0</output><br>
+                Total Price: RM <output name="price" for="adult child">0</output><br>
+            </p>
+
+            <p>
+                <input type="submit" value="Book Now">
+            </p>
+        </form>
+    </div>
+
+  
+    <div id="sidebar">
+        <h2>Now Showing</h2>
+        <ul>
+            <li><strong>Space Rangers</strong> - <span>PG-13</span> | <a href="#trailer1">Watch Trailer</a></li>
+            <li><strong>Kampung Comedy</strong> - <span>G</span> | <a href="#trailer2">Watch Trailer</a></li>
+            <li><strong>Campus Mystery</strong> - <span>18</span> | <a href="#trailer3">Watch Trailer</a></li>
+        </ul>
+    </div>
+
+    
+    <div id="footer">
+        <p>&copy; 2026 CineKampus. All rights reserved.</p>
+        <p>e-Ticket&reg; &ndash; Campus Cinema &lt; RM10 every Tuesday</p>
+    </div>
+
+</body>
+</html>
