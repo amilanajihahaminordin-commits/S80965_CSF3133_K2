@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4 - Web Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            text-decoration: underline;
+        }
+
+        nav {
+            background-color: #444;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav ul li a:visited {
+            color: #bbb;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            text-decoration: overline;
+        }
+
+        nav ul li a:active {
+            background-color: #1abc9c;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .input-box {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .choice-group {
+            margin-top: 5px;
+        }
+
+        .choice-label {
+            margin-right: 15px;
+            font-weight: normal;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            nav ul li {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Lab Exercise 4</h1>
+        <p>HTML5 and CSS Application</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#form">Form</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="introduction">
+            <h2>HTML5 Structure</h2>
+            <article>
+                <h3>The Value of Semantic Elements</h3>
+                <p>Semantic elements like header, nav, section, and footer help web browsers and search engines understand the structure of the web page content clearly.</p>
+            </article>
+        </section>
+
+        <section id="media">
+            <h2>Video Showcase</h2>
+            <p>Below is a short video placeholder loaded with caption configurations:</p>
+            
+            <video controls>
+                <source src="https://w3schools.com" type="video/mp4">
+                <track src="subtitles_en.vtt" kind="captions" srclang="en" label="English" default>
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section id="form">
+            <h2>User Profile Form</h2>
+            <form action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" class="input-box" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" class="input-box" placeholder="example@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="choice-group">
+                        <label class="choice-label"><input type="radio" name="gender" value="male" required> Male</label>
+                        <label class="choice-label"><input type="radio" name="gender" value="female"> Female</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Favorite Hobbies:</label>
+                    <div class="choice-group">
+                        <label class="choice-label"><input type="checkbox" name="hobby" value="reading"> Reading</label>
+                        <label class="choice-label"><input type="checkbox" name="hobby" value="sports"> Sports</label>
+                        <label class="choice-label"><input type="checkbox" name="hobby" value="music"> Music</label>
+                    </div>
+                </div>
+
+                <button type="submit">Submit Information</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Web Development Assignment.</p>
+    </footer>
+
+</body>
+</html>
