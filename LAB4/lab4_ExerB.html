@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Café Campus</title>
+    <link rel="stylesheet" type="text/css" href="cafe.css">
+
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdfbf7;
+            color: #333333;
+        }
+
+        header {
+            background-color: #4a2c2a;
+            color: #ffffff;
+            padding: 25px 15px;
+            text-align: center;
+        }
+
+        h1 {
+            text-decoration: overline;
+            margin: 0;
+        }
+
+        p {
+            color: #333333;
+            text-align: justify;
+        }
+
+        .intro {
+            font-size: 18px;
+            background-color: #FDEBD0;
+            padding: 12px;
+            border-radius: 6px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #C0392B;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #7f8c8d;
+            margin-right: 8px;
+        }
+
+        main {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        section {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+        }
+
+        .item {
+            border-bottom: 1px solid #eeeeee;
+            padding-bottom: 10px;
+            margin-bottom: 12px;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .feedback-form {
+            background-color: #fef9e7;
+            padding: 20px;
+            border: 1px solid #f5cba7;
+            border-radius: 8px;
+        }
+
+        .feedback-form label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .feedback-form input[type="text"],
+        .feedback-form input[type="email"] {
+            width: 95%;
+            padding: 8px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+        }
+
+        .feedback-form .inline-option {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+
+        .feedback-form button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #4a2c2a;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .feedback-form button:hover {
+            background-color: #E67E22;
+        }
+
+        footer {
+            background-color: #4a2c2a;
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        footer p {
+            color: #ffffff;
+            text-align: center;
+        }
+
+        footer address {
+            font-style: normal;
+            margin-top: 6px;
+        }
+
+        footer address a {
+            color: #FDEBD0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>e-Café Campus</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="menu">
+            <h2>Today's Menu</h2>
+            <p class="intro">Freshly brewed coffee and local delights every day.</p>
+
+            <article class="item">
+                <h3>Kopi Tarik</h3>
+                <p>Only <span class="old-price">RM 4.50</span> <span class="highlight">RM 3.50</span></p>
+            </article>
+
+            <article class="item">
+                <h3>Nasi Lemak</h3>
+                <p>Only <span class="old-price">RM 6.50</span> <span class="highlight">RM 5.00</span></p>
+            </article>
+        </section>
+
+        <section id="video">
+            <h2>Watch Our Story</h2>
+            <figure>
+                <video width="400" height="300" controls>
+                    <source src="cafe.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Behind the scenes at e-Café Campus: freshly roasted beans and daily specials.</figcaption>
+            </figure>
+        </section>
+
+        <section id="feedback">
+            <h2>Customer Feedback</h2>
+            <form class="feedback-form" action="#" method="post">
+                <label for="custName">Name:</label>
+                <input type="text" id="custName" name="custName" placeholder="Enter your name" required>
+
+                <label for="custEmail">E-mail:</label>
+                <input type="email" id="custEmail" name="custEmail" placeholder="you@campus.edu.my" required>
+
+                <label>Visit Type:</label>
+                <label class="inline-option"><input type="radio" name="visitType" value="Dine-in" checked> Dine-in</label>
+                <label class="inline-option"><input type="radio" name="visitType" value="Take-away"> Take-away</label>
+
+                <label>Favourite Items:</label>
+                <label class="inline-option"><input type="checkbox" name="favItems" value="Kopi Tarik"> Kopi Tarik</label>
+                <label class="inline-option"><input type="checkbox" name="favItems" value="Nasi Lemak"> Nasi Lemak</label>
+                <label class="inline-option"><input type="checkbox" name="favItems" value="Roti Bakar"> Roti Bakar</label>
+                <label class="inline-option"><input type="checkbox" name="favItems" value="Teh Ais"> Teh Ais</label><br>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>&copy; 2026 e-Café Campus</p>
+        <address>
+            Questions or catering orders? Email us at
+            <a href="mailto:ecafe@campus.edu.my">ecafe@campus.edu.my</a>
+        </address>
+    </footer>
+</body>
+</html>
