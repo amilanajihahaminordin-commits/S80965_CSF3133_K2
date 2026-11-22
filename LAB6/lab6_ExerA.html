@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors - CS Club Open Day</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header section with title and short instruction -->
+        <header>
+            <h1>Rock, Paper, Scissors</h1>
+            <p>Enter your name and click Start Game to challenge the computer!</p>
+        </header>
+
+        <!-- Player registration section -->
+        <div class="player-section">
+            <label for="playerName">Player Name:</label>
+            <input type="text" id="playerName" placeholder="Enter your name">
+            <button onclick="startGame()">Start Game</button>
+            <p id="welcomeMsg"></p>
+        </div>
+
+        <!-- Main gameplay section with choice buttons and images -->
+        <div class="game-section">
+            <div class="choices">
+                <button onclick="playRound('rock')">Rock</button>
+                <button onclick="playRound('paper')">Paper</button>
+                <button onclick="playRound('scissors')">Scissors</button>
+            </div>
+
+            <div class="display-area">
+                <div class="choice-box">
+                    <h2>You</h2>
+                    <img id="playerImg" src="rock.png" alt="Player Choice">
+                </div>
+                <div class="choice-box">
+                    <h2>Computer</h2>
+                    <img id="computerImg" src="rock.png" alt="Computer Choice">
+                </div>
+            </div>
+        </div>
+
+        <!-- Result announcement and scoreboard section -->
+        <div class="result-section">
+            <p id="result">Make your move!</p>
+            <div class="scoreboard">
+                <span>Wins: <strong id="wins">0</strong></span> |
+                <span>Losses: <strong id="losses">0</strong></span> |
+                <span>Draws: <strong id="draws">0</strong></span>
+            </div>
+        </div>
+
+        <!-- Round-by-round history table section -->
+        <section class="history-section">
+            <h2>Match History</h2>
+            <table id="history">
+                <thead>
+                    <tr>
+                        <th>Round</th>
+                        <th>You</th>
+                        <th>Computer</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody id="historyBody">
+                    <!-- Rows will be added dynamically by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Game controls for summary and reset -->
+        <div class="controls-section">
+            <button onclick="showSummary()">Show Summary</button>
+            <button onclick="resetGame()" class="reset-btn">Reset</button>
+            <p id="summary"></p>
+        </div>
+
+        <!-- Footer displaying start time and copyright -->
+        <footer>
+            <p id="startTime">Game not started yet.</p>
+            <p>&copy; 2026 Computer Science Club Open Day</p>
+        </footer>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="game.js"></script>
+</body>
+</html>
