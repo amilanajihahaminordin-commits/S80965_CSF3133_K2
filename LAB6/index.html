@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Quiz Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Header introducing the quiz -->
+        <header>
+            <h1>Web Development Quiz</h1>
+            <p>Test your HTML, CSS, and JavaScript knowledge!</p>
+        </header>
+
+        <!-- Main section for timer, questions, and options -->
+        <main id="quiz-section">
+            <div class="status-bar">
+                <span id="question-number">Question 1 of 5</span>
+                <span id="timer">Time Left: 15s</span>
+            </div>
+
+            <h2 id="question-text">Question goes here</h2>
+            
+            <div id="options-container" class="options-grid">
+                <!-- Answer buttons will be generated dynamically by JS -->
+            </div>
+
+            <!-- Feedback section -->
+            <div id="feedback" class="feedback hidden"></div>
+
+            <!-- Button to submit/navigate -->
+            <div class="controls">
+                <button id="next-btn" class="btn hidden">Next Question</button>
+                <button id="restart-btn" class="btn hidden">Restart Quiz</button>
+            </div>
+        </main>
+
+        <!-- Footer to display final score -->
+        <footer id="score-footer">
+            <p id="score-display">Current Score: 0</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
