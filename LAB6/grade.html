@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <!-- Part 2 (Task 9): Link external CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Grade Calculator</h1>
+
+        <!-- Part 1 Fix: Added 'return' before checkMark() so returning false stops page reload -->
+        <form name="gradeForm" onsubmit="return checkMark()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="mark">Mark (0-100):</label>
+            <input type="text" id="mark" name="mark">
+            <!-- Part 2 (Task 7): Added Random Mark button (type="button" prevents form submission) -->
+            <button type="button" onclick="generateRandomMark()">Random Mark</button><br>
+
+            <button type="submit">Check Grade</button>
+        </form>
+
+        <!-- Result display and timestamp -->
+        <p id="result"></p>
+        <!-- Part 2 (Task 8): Paragraph to display the date and time checked -->
+        <p id="checkedTime"></p>
+
+        <!-- Part 1 Fix: Changed showtable() to showTable() to match JS function name -->
+        <button type="button" onclick="showTable()">Show Grade Table</button>
+        <div id="tableContainer"></div>
+    </div>
+
+    <script src="grade.js"></script>
+</body>
+</html>

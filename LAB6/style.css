@@ -1,65 +1,56 @@
-/* General page layout and font styling */
+/* General page layout and container styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
-    color: #333;
+    background-color: #f3f4f6;
+    color: #1f2937;
     margin: 0;
-    padding: 20px;
+    padding: 30px;
     display: flex;
     justify-content: center;
 }
 
 .container {
     background-color: #ffffff;
-    max-width: 650px;
+    max-width: 500px;
     width: 100%;
-    padding: 25px;
+    padding: 25px 30px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
     text-align: center;
-}
-
-/* Header styling */
-header {
-    border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-}
-
-header h1 {
-    margin: 0 0 8px 0;
     color: #1e3a8a;
+    margin-top: 0;
 }
 
-/* Player input section */
-.player-section {
-    margin-bottom: 20px;
+/* Form inputs and labels */
+label {
+    display: inline-block;
+    width: 110px;
+    font-weight: bold;
+    margin-bottom: 12px;
 }
 
-.player-section input {
-    padding: 10px;
-    font-size: 16px;
+input[type="text"] {
+    padding: 8px 10px;
     border: 1px solid #cbd5e1;
     border-radius: 5px;
-    margin-right: 5px;
+    font-size: 14px;
+    margin-bottom: 12px;
 }
 
-#welcomeMsg {
-    font-weight: bold;
-    color: #1e3a8a;
-    margin-top: 10px;
-}
-
-/* Button styling with hover effect */
+/* Button styling and hover effect */
 button {
-    padding: 10px 18px;
-    font-size: 16px;
+    padding: 9px 15px;
+    font-size: 14px;
     background-color: #2563eb;
-    color: white;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 5px;
+    margin-top: 5px;
+    margin-right: 6px;
     transition: background-color 0.2s ease;
 }
 
@@ -67,51 +58,26 @@ button:hover {
     background-color: #1d4ed8;
 }
 
-.reset-btn {
-    background-color: #dc2626;
-}
-
-.reset-btn:hover {
-    background-color: #b91c1c;
-}
-
-/* Fixed size for Rock, Paper, Scissors images */
-.display-area {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-}
-
-.choice-box img {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-    border: 2px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 10px;
-    background-color: #f8fafc;
-}
-
-/* Result announcement and scoreboard */
+/* Result and timestamp text */
 #result {
-    font-size: 22px;
-    font-weight: bold;
-    margin: 15px 0;
-}
-
-.scoreboard {
     font-size: 18px;
-    background-color: #f1f5f9;
-    padding: 10px;
-    border-radius: 6px;
-    margin-bottom: 20px;
+    font-weight: bold;
+    margin-top: 18px;
+    margin-bottom: 6px;
 }
 
-/* History table styling */
+#checkedTime {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+/* Grade table styling (borders, padding, header background) */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 15px 0 20px 0;
+    margin-top: 15px;
 }
 
 th, td {
@@ -122,25 +88,9 @@ th, td {
 
 th {
     background-color: #1e3a8a;
-    color: white;
+    color: #ffffff;
 }
 
 tr:nth-child(even) {
     background-color: #f8fafc;
-}
-
-/* Summary text and footer styling */
-#summary {
-    font-weight: bold;
-    font-size: 17px;
-    color: #0f172a;
-    margin-top: 12px;
-}
-
-footer {
-    margin-top: 25px;
-    padding-top: 15px;
-    border-top: 1px solid #e2e8f0;
-    font-size: 14px;
-    color: #64748b;
 }
