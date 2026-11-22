@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Terengganu - Student &amp; Visitor Promotions</title>
+
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Internal CSS for page-specific styles -->
+    <style>
+        /* Page-specific header background gradient and hero spacing */
+        header {
+            background: linear-gradient(135deg, #0f766e, #0369a1);
+            color: #ffffff;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        /* Page-specific highlight box for the seat availability meter */
+        .seat-tracker {
+            background-color: #f0fdfa;
+            border: 1px solid #99f6e4;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section introducing the tourism campaign -->
+    <header>
+        <h1>Explore Beautiful Terengganu</h1>
+        <p>Exclusive Student &amp; Visitor Holiday Packages</p>
+    </header>
+
+    <!-- Navigation bar linking to each page section -->
+    <nav>
+        <ul>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#video">Promo Video</a></li>
+            <li><a href="#trip">Book a Trip</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main page content wrapper -->
+    <main class="container">
+        <!-- Section 1: Featured Destinations & Promotion Prices -->
+        <section id="destinations">
+            <h2>Top Destinations &amp; Student Deals</h2>
+            <p class="center">Discover crystal-clear islands, heritage towns, and rainforest lakes at special discounted rates.</p>
+
+            <div class="cards-wrapper">
+                <!-- Destination 1 -->
+                <article class="card">
+                    <h3>Pulau Redang</h3>
+                    <p>Enjoy 3D2N snorkeling packages with crystal-clear waters, white sandy beaches, and turtle watching.</p>
+                    <p class="price">
+                        <span class="old-price">RM 399</span>
+                        <span class="new-price">RM 249</span>
+                    </p>
+                </article>
+
+                <!-- Destination 2 -->
+                <article class="card">
+                    <h3>Tasik Kenyir</h3>
+                    <p>Explore Southeast Asia's largest man-made lake, waterfall trails, and herbal garden boat tours.</p>
+                    <p class="price">
+                        <span class="old-price">RM 280</span>
+                        <span class="new-price">RM 179</span>
+                    </p>
+                </article>
+
+                <!-- Destination 3 -->
+                <article class="card">
+                    <h3>Kuala Terengganu Heritage</h3>
+                    <p>Visit the Crystal Mosque, Drawbridge, and Pasar Payang while tasting authentic keropok lekor.</p>
+                    <p class="price">
+                        <span class="old-price">RM 199</span>
+                        <span class="new-price">RM 120</span>
+                    </p>
+                </article>
+            </div>
+
+            <!-- Meter showing seats filled -->
+            <div class="seat-tracker">
+                <label for="seats"><strong>Trip Seats Filled (28 / 40 seats taken):</strong></label><br>
+                <meter id="seats" min="0" max="40" value="28">28 out of 40</meter>
+            </div>
+        </section>
+
+        <!-- Section 2: Promotional Video -->
+        <section id="video">
+            <h2>Experience Terengganu</h2>
+            <figure class="center">
+                <video width="640" height="360" controls>
+                    <source src="terengganu_promo.mp4" type="video/mp4">
+                    Your browser does not support the HTML5 video tag. Please update your browser to watch the Terengganu promotional video.
+                </video>
+                <figcaption class="caption">Aerial highlights of Pulau Perhentian, Pulau Redang, and Kuala Terengganu Drawbridge.</figcaption>
+            </figure>
+        </section>
+
+        <!-- Section 3: Trip Interest Form -->
+        <section id="trip">
+            <h2>Register Your Trip Interest</h2>
+            <form class="trip-form" action="#" method="post">
+                <!-- Name and Email text inputs -->
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail Address:</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <!-- Traveller Type Radio Buttons -->
+                <div class="form-group">
+                    <p><strong>Traveller Type:</strong></p>
+                    <label class="inline-label"><input type="radio" name="travellerType" value="Student" checked> Student</label>
+                    <label class="inline-label"><input type="radio" name="travellerType" value="Staff"> Staff</label>
+                    <label class="inline-label"><input type="radio" name="travellerType" value="Public"> Public</label>
+                </div>
+
+                <!-- Interests Checkboxes -->
+                <div class="form-group">
+                    <p><strong>Interests:</strong></p>
+                    <label class="inline-label"><input type="checkbox" name="interests" value="Islands"> Islands</label>
+                    <label class="inline-label"><input type="checkbox" name="interests" value="Food"> Food</label>
+                    <label class="inline-label"><input type="checkbox" name="interests" value="Culture"> Culture</label>
+                    <label class="inline-label"><input type="checkbox" name="interests" value="Nature"> Nature</label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit Interest</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer with copyright and contact address -->
+    <footer>
+        <p>&copy; 2026 Terengganu State Tourism Office. All rights reserved.</p>
+        <address>
+            Contact our Student &amp; Visitor Desk:
+            <a href="mailto:info@visitterengganu.gov.my">info@visitterengganu.gov.my</a>
+        </address>
+    </footer>
+</body>
+</html>

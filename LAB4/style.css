@@ -1,0 +1,227 @@
+/* ==========================================================================
+   General Page Layout & Typography
+   ========================================================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: #1e293b;
+    background-color: #f8fafc;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Main responsive container */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+/* Heading text decorations */
+h1 {
+    font-size: 2.2rem;
+    text-decoration: overline;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 1.6rem;
+    color: #0f766e;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.center {
+    text-align: center;
+}
+
+/* ==========================================================================
+   Navigation Bar Styling
+   ========================================================================== */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #0f172a;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 14px 22px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   Interactive Link States (LVHA Order: link -> visited -> hover -> active)
+   ========================================================================== */
+a:link {
+    color: #38bdf8;
+}
+
+a:visited {
+    color: #a5f3fc;
+}
+
+a:hover {
+    color: #ffffff;
+    background-color: #0284c7;
+}
+
+a:active {
+    color: #fde047;
+    background-color: #0369a1;
+}
+
+/* ==========================================================================
+   Section IDs & Destination Cards
+   ========================================================================== */
+#destinations, #video, #trip {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 18px;
+    width: 28%;
+    min-width: 240px;
+    flex-grow: 1;
+}
+
+.card h3 {
+    color: #0369a1;
+    margin-top: 0;
+}
+
+/* Price display with line-through on old price */
+.price {
+    font-size: 1.15rem;
+    margin-top: 12px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #94a3b8;
+    margin-right: 10px;
+}
+
+.new-price {
+    font-weight: bold;
+    color: #dc2626;
+    font-size: 1.25rem;
+}
+
+meter {
+    width: 80%;
+    max-width: 400px;
+    height: 22px;
+    margin-top: 8px;
+}
+
+/* ==========================================================================
+   Responsive Promotional Video & Caption
+   ========================================================================== */
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #cbd5e1;
+}
+
+.caption {
+    font-style: italic;
+    color: #475569;
+    margin-top: 10px;
+}
+
+/* ==========================================================================
+   Trip Interest Form Styling
+   ========================================================================== */
+.trip-form {
+    background-color: #f0f9ff;
+    padding: 22px;
+    border: 2px solid #bae6fd;
+    border-radius: 8px;
+    width: 85%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #94a3b8;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group .inline-label {
+    display: inline-block;
+    font-weight: normal;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: #0f766e;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #115e59;
+}
+
+/* ==========================================================================
+   Footer Styling
+   ========================================================================== */
+footer {
+    background-color: #0f172a;
+    color: #e2e8f0;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+footer address {
+    font-style: normal;
+    margin-top: 8px;
+}
